@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+<body>
+    <h1>Hello my name is Jayef Ahmed</h1>
+    <h2>Name : {{name}}</h2>
+    <h2>Age : {{Age}}</h2>
+
+    <!-- if condition -->
+     {% if Age >= 20 %}
+        <h1>Adult</h1>
+     {% elif Age > 10 and Age < 20 %}
+        <h1>Teenager</h1>
+     {% else %}
+        <h1>child</h1>
+     {% endif %}
+
+     <!-- for loop -->
+      {% for i in friend %}
+         <h3>Name: {{i.name}} age: {{i.age}}</h3>
+      {% endfor %}
+
+      {{ course | join:" - " }}
+      <h3>{{ Age | add:"2" }}</h3>
+      <h2>Love: {{ love | capfirst }}</h2>
+
+      {{ friend | dictsort:"age" }}
+      <h3>{{ course | length }}</h3>
+      <h4>{{name | make_list}}</h4>
+</body>
+</html>
